@@ -41,8 +41,7 @@ Task1_NetworkPacketAnalyzer/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-
----
+```
 
 ## Task 2 – Network Intrusion Detection System
 
