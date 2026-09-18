@@ -10,6 +10,7 @@ The projects in this repository focus on practical cybersecurity concepts, netwo
 |------|---------|--------|
 | Task 1 | Network Packet Analyzer | Completed |
 | Task 2 | Network Intrusion Detection System | Completed |
+| Task 3 | Secure File Sharing System | Completed |
 ---
 
 ## Task 1 – Network Packet Analyzer
@@ -73,3 +74,26 @@ Task2_NIDS/
 ├── README.md
 └── .gitignore
 ```
+## Task 3 – Secure File Sharing System
+
+A backend file-sharing system built with Node.js and Express, focused on secure storage and controlled access rather than just basic upload/download.
+
+### Features
+- User authentication with JWT (JSON Web Tokens)
+- Passwords hashed with bcrypt before storage
+- Files encrypted with AES-256-GCM before being saved to disk
+- Role-based access control — users can only access their own files, admins can view all
+- SQLite database for users and file metadata
+
+### Technologies Used
+- Node.js / Express
+- SQLite3
+- jsonwebtoken, bcrypt
+- Node's built-in crypto module for encryption
+- multer for file uploads
+
+### Project Structure
+- `routes/auth.js` – signup/login
+- `routes/files.js` – upload, download, admin file listing
+- `middleware/auth.js` – JWT verification
+- `db.js` – database schema and connection
